@@ -12,7 +12,8 @@
     @if (!empty($jobs))
         <ul>
             @foreach ($jobs as $job)
-                <li>{{ $job }}</li>
+                {{-- comming form $loop variable which is built in already inside any loop --}}
+                <li>{{ $loop->iteration }} - {{ $job }}</li>
             @endforeach
         </ul>
     @else
